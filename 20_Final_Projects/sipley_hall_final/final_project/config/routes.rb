@@ -10,6 +10,7 @@ FinalProject::Application.routes.draw do
   get 'pages/about' 
   get 'about', to: 'pages#about'
   resources :users
+  resources :diagnostics
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

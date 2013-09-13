@@ -11,13 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130909234320) do
+ActiveRecord::Schema.define(version: 20130910235200) do
 
   create_table "diagnostics", force: true do |t|
     t.string   "user_id"
     t.string   "writer_type"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "answer1"
+    t.string   "answer2"
+    t.string   "answer3"
+    t.string   "answer4"
   end
 
   create_table "surveys", force: true do |t|

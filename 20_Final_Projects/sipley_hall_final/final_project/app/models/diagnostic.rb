@@ -1,6 +1,7 @@
 class Diagnostic < ActiveRecord::Base
-	validates :email, presence: true
-	has_many :users
+	# validates , presence: true
+	# has_many :users
+	# attr_accessible :answer1, :answer2, :answer3, :answer4
 end
 
 
