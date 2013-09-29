@@ -1,87 +1,46 @@
-<!DOCTYPE html>
 <head>
-  <link href="/normalize.css" rel="stylesheet">
   <style>
-    header {
-      text-align: center;
-      background: url('http://img0.etsystatic.com/000/0/6473228/il_570xN.290018622.jpg');
-      background-size: cover;
-      color: white;
-    }
-    a {
-      color: white;
-    }
-    h1 {
-      font-size: 70px;
-      font-family: helvetica;
-    }
-    img {
-      margin: 40px 0px 0px 0px;
-      border: 7px solid white;
-      border-radius: 20px;
-    }
-    ul {
-      padding: 10px;
-      background: rgba(0,0,0,0.5);
-    }
-    li {
-      display: inline;
-      padding: 0px 10px 0px 10px;
-    }
-    article {
-      max-width: 500px;
-      padding: 20px;
-      margin: 0px auto;
-      font-family: helvetica;
-      color: #330033;
-    }
-    @media (max-width: 500px) {
-      h1 {
-        font-size: 36px;
-      }
-      li {
-        display: block;
-        padding: 5px;
-      }
-    }
+
+body {
+  background-image: url(<%= asset_path 'blazer.jpg' %>)
+}
+
+div {
+  color: white;
+}
   </style>
 </head>
-<body>
-  <header>
-    <img src="/assets/jeff.png">
-    <h1>Tailor</h1>
-    <ul>
-      <li><a href="http://localhost:3000/pages/about">About</a></li>
-      <li><a href="http://localhost:3000/diagnostics/new">Diagnostic</a></li>
-      <li><a href="http://localhost:3000/surveys/new">Survey</a></li>
-    </ul>
-  </header>
+<div align="center">
+</header><h2>Blazer Sign up</h2>
+</div>
+  
+<div align="center">
 <h2>Edit <%= resource_name.to_s.humanize %></h2>
 
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name), :html => { :method => :put }) do |f| %>
   <%= devise_error_messages! %>
 
-  <div><%= f.label :email %><br />
+  <div align="center"><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
 
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
 
-  <div><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
+  <div align="center"><%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
   <%= f.password_field :password, :autocomplete => "off" %></div>
 
-  <div><%= f.label :password_confirmation %><br />
+  <div align="center"><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+  <div align="center"><%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
   <%= f.password_field :current_password %></div>
 
-  <div><%= f.submit "Update" %></div>
+  <div align="center"><%= f.submit "Update" %></div>
 <% end %>
 
 <h3>Cancel my account</h3>
 
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
+<p align="center">Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), :data => { :confirm => "Are you sure?" }, :method => :delete %></p>
 
 <%= link_to "Back", :back %>

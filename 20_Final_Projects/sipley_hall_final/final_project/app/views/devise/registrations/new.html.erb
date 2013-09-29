@@ -1,24 +1,43 @@
-<h2>Sign up</h2>
+<head>
+  <style>
 
+body {
+  background-image: url(<%= asset_path 'blazer.jpg' %>)
+}
+
+div {
+  color: white;
+}
+  </style>
+</head> 
+
+<div align="center"><h2>Blazer Sign up</h2>
+</div>
+
+<div align="center">
 <%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
-  <%= devise_error_messages! %>
+  <%= devise_error_messages! %> </div>
 
-  <div><%= f.label :first_name %><br />
+  <div align="center"><%= f.label :first_name %><br />
   <%= f.text_field :first_name %></div>
 
-   <div><%= f.label :last_name %><br />
+   <div align="center"><%= f.label :last_name %><br />
   <%= f.text_field :last_name %></div>
 
-  <div><%= f.label :email %><br />
+  <div align="center"><%= f.label :email %><br />
   <%= f.email_field :email, :autofocus => true %></div>
 
-  <div><%= f.label :password %><br />
+  <div align="center"><%= f.label :password %><br />
   <%= f.password_field :password %></div>
 
-  <div><%= f.label :password_confirmation %><br />
+  <div align="center"><%= f.label :password_confirmation %><br />
   <%= f.password_field :password_confirmation %></div>
 
-  <div><%= f.submit "Sign up" %></div>
+  <div align="center"><%= f.submit "Sign up" %></div>
 <% end %>
 
 <%= render "devise/shared/links" %>
+
+</body>
+</html>
+
